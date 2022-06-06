@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 import { CartContext } from './CartContext'
 import CartItem from './CartItem'
 
-const Cart = props => {
+const Cart = ({data}) => {
 
   const [addItem, removeItem, clear, isInCart, devuelveCantItems, items] = useContext(CartContext)
   const [show, setShow] = useState(false)
@@ -28,9 +28,9 @@ const Cart = props => {
     <>
         { show ?
           <>
-             {items.map((data)=> {
+             {items.map((value)=> {
             return (
-            <CartItem key={data.id} item={data} />  
+            <CartItem key={value.id} item={value} />  
             )
             })
             }
