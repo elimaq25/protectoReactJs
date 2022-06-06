@@ -1,5 +1,6 @@
-body {
+*{
   margin: 0;
+  padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -10,4 +11,191 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.App{
+  max-width: 1550px;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  box-shadow: 0 5px 6px #FFECF9;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+/*------------------Header-----------------*/
+
+.header {
+  width: 97%;
+  min-height: 100px;
+  max-width: 1530px;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  box-sizing: border-box;
+  background-color: aliceblue;
+  box-shadow: 0 5px 10px black;
+}
+
+a{
+  color: black;
+  text-align: none;
+  text-transform: uppercase;
+}
+
+a:hover{
+  color: purple;
+}
+
+li{
+  list-style: none;
+}
+
+header ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+header ul li{
+  padding: 0 1rem;
+
+}
+
+header ul li a{
+  font-weight: bold;
+}
+
+.cart {
+  float: left;
+  left: 1200px;
+  bottom: -5px;
+  }
+
+.cart box-icon{
+  width: 25px;
+  height: 25px;
+}
+
+.cart span{
+  position: absolute;
+  top: 40px;
+  border: 1px solid red;
+  font-weight: 700;
+  background-color: red;
+  color: white;
+}
+
+.menu{
+  margin-left: 40px;
+}
+
+
+/*------------------Agregar al carrito-----------------*/
+.agregar{
+  background-color: antiquewhite;
+  width: 20%;
+}
+
+.botones{
+  display: flex;
+  justify-content: space-around;
+  height: 30px;
+  border-color: aqua;
+  background-color: aquamarine; 
+}
+
+
+
+.alcarrito{
+  margin-left: 60px;
+}
+
+.estilo_alcarrito{
+  border-color: blue;
+  border-radius: 35px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: aquamarine;
+}
+
+/*------------------Productos-----------------*/
+
+.productos{
+  padding: 5rem 2 rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+  gap: 3rem 1rem;
+  box-sizing: border-box;
+}
+
+.producto{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 1px 10px 10px 2px rgba(0, 0, 0, 2);
+  border: 6px solid transparent;
+  border-radius: 5px;
+}
+
+.producto:hover{
+  border:  6px solid rgba(172, 255, 47, 0.432)
+}
+.fotos{
+  width: 400px;
+  height: 400px;
+  padding: 5rem 2 rem;
+}
+
+/*------------------Detalle de producto-----------------*/
+
+
+.container{
+ padding: 60px;
+ background-color: papayawhip;
+ border-top: 6px solid purple ;
+ height: 1000px;
+}
+
+
+.foto_detalle{
+ width: 60%;
+ float: left;
+ margin-right: 30px;
+}
+
+
+.nombre_detalle{
+ font-size: 50px;
+ margin-bottom: 40px;
+ align-items: center;
+ text-align: center;
+}
+
+.descripcion_detalle{
+ font-size: 30px;
+ margin-bottom: 30px;
+ font-weight: 400;
+}
+
+.precio_detalle{
+ font-weight: 600;
+ font-size: 40px;
+ margin-bottom: 150px;
+ margin-top: 100px;
+}
+
+.id_detalle{
+ margin-top: 100px;
+}
+
+.carri{
+  border-bottom: 300px;
+  margin-left: 100px;
 }
