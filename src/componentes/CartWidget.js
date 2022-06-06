@@ -20,11 +20,11 @@ const CartWidget = () => {
     <>
     <div>
         <div className='cart' >
-        <Link to="/cart">
+        <Link to="/cart" >
         <img src={carrito} alt="logo" width="25"></img>
         </Link>
             <span className='item__total'>{devuelveCantItems()}</span>
-            {/* <span>{cantItems}</span> */}
+            
         </div>
     </div>
     </>

@@ -8,7 +8,6 @@ const Del = () => {
     <>
         <h1 >Articulo eliminado</h1>
         <div >
-
         <Link to="/cart">Volver al Carrito</Link>
         </div>
 

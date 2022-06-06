@@ -8,7 +8,6 @@ import { category } from "./Productos";
 
 const ItemListContainer = () => {
     const [items, setItems] = useState([]);
-
     const { category } = useParams();
       
   

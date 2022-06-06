@@ -12,7 +12,7 @@ const Cart = ({data}) => {
   const [total, setTotal] = useState(0)
 
   useEffect(()=> {
-    if(items.lenght>0){
+    if(items.length>0){
       setShow(true)
     }
 
@@ -40,7 +40,7 @@ const Cart = ({data}) => {
             :
           <>
             <h2>Carrito vacío</h2>
-           
+           <Link to="/">Ver tienda</Link>
           </>
           } 
     </> 
