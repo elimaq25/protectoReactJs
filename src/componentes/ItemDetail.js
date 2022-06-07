@@ -7,20 +7,40 @@ import { CartContext } from './CartContext';
 
 const ItemDetail = ({
   title,
-  src,
+  img,
   precio,
   id
 }) => {
- const [add, setAdd] = useState (false)
+  const [add, setAdd] = useState (false)
  
- const [addItem] = useContext(CartContext)
-
-
- 
- const onAdd =(value) => {
+  const [addItem] = useContext(CartContext)
+  
+  
+   
+  const onAdd =(value) => {
   setAdd(!add);
-  addItem({title, precio, id, qty:value})
- }
+  addItem({qty:value})
+   }
+  
+  
+
+
+// const ItemDetail = ({
+//   title,
+//   src,
+//   precio,
+//   id
+// }) => {
+//  const [add, setAdd] = useState (false)
+ 
+//  const [addItem] = useContext(CartContext)
+
+
+ 
+//  const onAdd =(value) => {
+//   setAdd(!add);
+//   addItem({title, precio, id, qty:value})
+//  }
 
 
   
@@ -29,7 +49,7 @@ const ItemDetail = ({
     <div>
       <div className='container'>
       <h1 className='nombre_detalle'>{title}</h1>
-        <img className='foto_detalle' src={src}/>
+        <img className='foto_detalle' src={img}/>
         <p className='precio_detalle'>Precio: $ {precio}</p>
         <p className='id_detalle'>ID del producto: {id}</p>
       

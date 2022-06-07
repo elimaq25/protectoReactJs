@@ -16,7 +16,9 @@ const CartItem = ({item}) => {
               Eliminar
             </button>
           </Link>
+            
         </td>
+        {/* <button onClick={() => clear(items)} >Vaciar carrito</button> */}
       </tr>
     )
   }
