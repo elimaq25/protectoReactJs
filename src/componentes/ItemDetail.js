@@ -18,7 +18,7 @@ const ItemDetail = ({ item = []
    
   const onAdd =(value) => {
   setAdd(!add);
-  addItem({ qty:value})
+  addItem({title, precio, id, qty:value})
    }
   
   
