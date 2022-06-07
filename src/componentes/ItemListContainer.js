@@ -13,7 +13,7 @@ import { db } from '../firebase/firesbaseConfig';
 const ItemListContainer = () => {
 
        const [productos, setProductos] = useState([])    
-       
+       let { category } = useParams()
 
        useEffect(()=> {
         const getPantuflas = async () => {
@@ -26,10 +26,15 @@ const ItemListContainer = () => {
             docs.push({ ...doc.data(), id: doc.id });
           });
           // console.log(docs)
-          setProductos(docs)
+          if (category === undefined) {
+            setProductos(docs)
+          } else {
+            setProductos(docs.filter((item) => item.category === category)); 
+          }
+          
         }
           getPantuflas()
-       }, [])
+       }, [category])
 
   //   const [items, setItems] = useState([]);
   //   const { category } = useParams();
@@ -70,14 +75,14 @@ const ItemListContainer = () => {
         return (
           <>
           <h1>Catalogo de productos</h1>
-          {productos.map((data) => {
+          {/* {productos.map((data) => {
             return(
               <Link to={`item/${data.id}`} key={data.id}>
               <ItemList productos={data}/>
               </Link>
             )
-          })}
-          {/* <ItemList items={items}/> */}
+          })} */}
+          <ItemList productos={productos}/>
           
             
           </>

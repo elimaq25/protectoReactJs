@@ -5,12 +5,11 @@ import { Link } from 'react-router-dom';
 import { CartContext } from './CartContext';
 
 
-const ItemDetail = ({
-  title,
-  img,
-  precio,
-  id
-}) => {
+const ItemDetail = ({ item = []
+  }) => {
+  
+  const { title, img, precio, id } = item; 
+
   const [add, setAdd] = useState (false)
  
   const [addItem] = useContext(CartContext)
@@ -19,7 +18,7 @@ const ItemDetail = ({
    
   const onAdd =(value) => {
   setAdd(!add);
-  addItem({qty:value})
+  addItem({ qty:value})
    }
   
   

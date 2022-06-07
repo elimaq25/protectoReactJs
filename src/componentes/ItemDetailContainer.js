@@ -10,7 +10,7 @@ import { db } from '../firebase/firesbaseConfig';
 
 const ItemDetailContainer = () => {
 
-    const [producto, setProducto] = useState({}) 
+    const [item, setItem] = useState([]) 
    
     const { id } = useParams();
     
@@ -18,15 +18,15 @@ const ItemDetailContainer = () => {
        useEffect(()=> {
         const getPantuflas = async () => {
           const q = query(collection(db, "pantuflas"), where(documentId(), "==", id));
-          const docs = [];
           const querySnapshot = await getDocs(q);
+          const docs = [];
           querySnapshot.forEach((doc) => {
             // doc.data() is never undefined for query doc snapshots
             // console.log(doc.id, " => ", doc.data());
             docs.push({ ...doc.data(), id: doc.id });
           });
           console.log(docs)
-          setProducto(docs)
+          setItem(docs)
         }   
           getPantuflas()
        }, [id]) 
@@ -57,9 +57,14 @@ const ItemDetailContainer = () => {
 
   return (
     <div>
-        <>
-         <ItemDetail producto={producto}/>
-       </>
+        <h1>Detalle de producto</h1>
+        {item !== undefined
+        ? item.map((iteracion)=> {
+          return <ItemDetail item={iteracion}/>;
+        })
+        : null }
+
+        
         <>
         {/* <ItemDetail {...producto}/> */}
         </>
