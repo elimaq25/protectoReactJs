@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 
 const Item = ({item}) => {
-    const {id, title, descpricion, precio, src} = item;
+    // const {id, title, descpricion, precio, src} = item;
   return (
     <Link to={`/item/${item.id}`}>
     <div className='productos' >

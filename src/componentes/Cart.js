@@ -35,7 +35,7 @@ const Cart = ({data}) => {
             })
             }
             <p>Total: ${total}</p> 
-                           
+            <Link to="/finalizar"><button>Finalizar compra</button> </Link>             
           </>
             :
           <>

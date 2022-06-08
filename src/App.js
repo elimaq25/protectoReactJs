@@ -10,6 +10,7 @@ import ItemDetailContainer from "./componentes/ItemDetailContainer";
 import { CartProvider } from "./componentes/CartContext";
 import Cart from "./componentes/Cart";
 import Del from "./componentes/Del";
+import Finalizar from "./componentes/Finalizar";
 
 
   
@@ -28,7 +29,10 @@ function App() {
         <Route path="/category/:category" element={<ItemListContainer/>}/>
         <Route path="/item/:id" element={<ItemDetailContainer />}/>
         <Route path="/cart" element={<Cart/>}/>
+        <Route path="/finalizar" element={<Finalizar/>}/>
         <Route path="/del" element={<Del/>}/>
+
+
       </Routes>
     
      <br/>
