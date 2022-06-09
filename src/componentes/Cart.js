@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { CartContext } from './CartContext'
 import CartItem from './CartItem'
+import Finalizar from './Finalizar'
 
 const Cart = ({data}) => {
 
@@ -35,12 +36,13 @@ const Cart = ({data}) => {
             })
             }
             <p>Total: ${total}</p> 
-            <Link to="/finalizar"><button>Finalizar compra</button> </Link>             
+            <Link to="/finalizar" ><Finalizar items={items}/><button>Finalizar compra</button> </Link>             
           </>
             :
           <>
             <h2>Carrito vacío</h2>
            <Link to="/">Ver tienda</Link>
+
           </>
           } 
     </> 
